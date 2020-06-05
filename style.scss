@@ -1,0 +1,46 @@
+@mixin grid-areas {
+    display: grid;
+    margin: auto;
+}
+
+
+.top-left {
+    grid-area: top-left;
+    @include grid-areas();
+}
+
+.top-middle {
+    grid-area: top-middle;
+    @include grid-areas();
+}
+
+.top-right {
+    grid-area: top-right;
+    @include grid-areas();
+}
+
+
+.song-title {
+    grid-area: song-title;
+    @include grid-areas();
+}
+
+.song-progress {
+    grid-area: song-progress;
+    @include grid-areas();
+}
+
+.bottom-left {
+    grid-area: bottom-left;
+    @include grid-areas();
+}
+
+.bottom-middle {
+    grid-area: bottom-middle;
+    @include grid-areas();
+}
+
+.bottom-right {
+    grid-area: bottom-right;
+    @include grid-areas();
+}

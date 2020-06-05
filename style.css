@@ -1,0 +1,79 @@
+body {
+    height: 100vh;
+    --surface-color: lightblue;
+    --background-color: blue;
+    color: #555;
+    font-family: sans-serif;
+    display: grid;
+}
+
+.container {
+    height: 100%;
+    max-width: 411px;
+    max-height: 823px;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: 35px;
+    background-color: linear-gradient(var(--surface-color), #fff);
+    display: grid;
+    grid-template-rows: 80px auto 85px 70px 170px;
+    grid-template-columns: 120px auto 120px;
+    grid-template-areas: "top-left top-middle top-right"
+    "album-cover album-cover album-cover"
+    "song-title song-title song-title"
+    "song-progress song-progress song-progress"
+    "bottom-left bottom-middle bottom-right";
+}
+
+
+.album-cover {
+    grid-area: album-cover;
+}
+
+
+.record {
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    background-image: url(http://source.unsplash.com/random/220x220);
+    animation: spin 1s infinite;
+}
+
+.album-cover {
+    grid-area: album-cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.button {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border: solid var(--primary-color) 3px;
+    color: white;
+    background: blue;
+    box-shadow: 10px 10px 10px #6E91FF,
+                -10px -10px 0px white;
+}
+
+
+.button-big {
+    height: 68px;
+    width: 68px;
+}
+
+.button-small {
+    height: 36px;
+    width: 36px;
+}
